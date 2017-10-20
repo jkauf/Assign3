@@ -9,7 +9,6 @@ namespace Assign3
 {
     class GameObject
     {
-        //TODO: what units are we actually using? and what do they mean??
         private PointF location;
         private SizeF extents;
         private PointF velocity;
@@ -17,7 +16,7 @@ namespace Assign3
 
         public GameObject(PointF location, SizeF extents, PointF velocity)
         {
-            // GameObject.GameObject() 
+            
             this.location = location;
             this.extents = extents;
             this.velocity = velocity;
@@ -30,8 +29,7 @@ namespace Assign3
 
         public void Move(TimeSpan timePassed)
         {
-            // dy = vy * dt;    dx = vx * dt;
-            // newy = curry + vy * dt;      newx = currx + vx * dt;
+           
             float newy = location.Y + velocity.Y * (float)timePassed.TotalSeconds;
             float newx = location.X + velocity.X * (float)timePassed.TotalSeconds;
 
